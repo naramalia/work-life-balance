@@ -1,0 +1,40 @@
+.nav_wrapper {
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 10px [left-s] 1fr  [left-e ctr-s] 1fr [ctr-e right-s] 1fr [right-e] 10px;
+    grid-gap: 5px;
+
+    .nav-tile {
+        width: minmax(50px, 300px);
+        border: 1px solid transparent;
+        border-radius: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_left {
+            grid-column: left-s/left-e;
+            background-color: $color-green;
+        }
+
+        &_ctr {
+            grid-column: ctr-s/ctr-e;
+            background-color: $color-lightblue;
+        }
+
+        &_right {
+            grid-column: right-s/right-e;
+            background-color: $color-purple;
+        }
+
+        &_title {
+            font-size: 3em;
+            font-weight: 600;
+            color: white;
+        }
+    }
+}
+
