@@ -1,30 +1,32 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Navigation extends Component {
+    constructor () {
+        super();
+    }
+    
+    handleOnClick () {
+
+    }
+    
     render () {
-
         return (
-            <div className='nav_wrapper'>
-
+           <div className='nav_wrapper'>
+                
                 <div className='nav-tile nav-tile_left'>
-                    <div className='nav-tile_title'>
-                        work
-                    </div>
+                    <Link to="/tasks">work</Link>
                 </div>
 
                 <div className='nav-tile nav-tile_ctr'>
-                    <div className='nav-tile_title'>
-                       LIFE
-                    </div>
+                    <Link to="/center">LIFE</Link>
                 </div>
 
                 <div className='nav-tile nav-tile_right'>
-                    <div className='nav-tile_title'>
-                        balance
-                    </div>
+                    <Link to="/emotions">balance</Link>
                 </div>
 
             </div>
-        )
+        );
     }
 }

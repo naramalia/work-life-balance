@@ -10,10 +10,14 @@
     .nav-tile {
         width: minmax(50px, 300px);
         border: 1px solid transparent;
-        border-radius: 400px;
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        font-size: 3em;
+        font-weight: 600;
+        color: white;
 
         &_left {
             grid-column: left-s/left-e;
@@ -28,12 +32,6 @@
         &_right {
             grid-column: right-s/right-e;
             background-color: $color-purple;
-        }
-
-        &_title {
-            font-size: 3em;
-            font-weight: 600;
-            color: white;
         }
     }
 }

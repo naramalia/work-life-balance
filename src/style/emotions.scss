@@ -1,0 +1,54 @@
+.emotion-check_wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    .emotion-check_header {
+        height: 80px;
+        font-size: 3em;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .emotion-check {
+        height: 400px;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 1/-1;
+        grid-template-columns: 15px [blue-s] 1fr [blue-e green-s] 1fr [green-e yellow-s] 1fr [yellow-e red-s] 1fr [red-e] 15px;
+        grid-gap: 15px;
+        border: 2px solid transparent;
+    }
+
+    .emotion-check {
+        &_card {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 2em;
+        font-weight: 600;
+        }
+
+        &_blue {
+            grid-column: blue-s/blue-e;
+            background-color: blue;
+        }
+
+        &_green {
+            grid-column: green-s/green-e;
+            background-color: green;
+        }
+
+        &_yellow {
+            grid-column: yellow-s/yellow-e;
+            background-color: yellow;
+        }
+
+        &_red {
+            grid-column: red-s/red-e;
+            background-color: red;
+        }
+    }
+}

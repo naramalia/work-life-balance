@@ -19,7 +19,6 @@ function main() {
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
           <App />
-          
       </BrowserRouter>
     </Provider>,
     document.querySelector(".app-wrapper")
