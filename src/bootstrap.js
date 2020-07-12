@@ -17,7 +17,7 @@ import Navigation from './components/navigation/navigation';
 import CenterGround from './components/Center/centerGround';
 import TaskCheck from './components/TaskManager/taskCheck';
 import EmoCheck from './components/EmoManager/emoCheck';
-import Emotion from './components/EmoManager/emotion';
+import EmoModal from './components/EmoManager/emoModal';
 
 import Blue from './components/EmoManager/Cards/blue';
 import Green from './components/EmoManager/Cards/green';
@@ -35,7 +35,7 @@ function main() {
             <Route path="/center" component={CenterGround} />
             <Route path="/tasks" component={TaskCheck} />
             <Route path="/emotions" component={EmoCheck} />
-            <Route path="/emotion" component={Emotion} />
+            <Route path="/emotion" component={EmoModal} />
 
             <Route path="/blue" component={Blue} />
             <Route path="/green" component={Green} />

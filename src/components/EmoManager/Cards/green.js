@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Mantra from '../ColorCard/mantra';
 import Timer from '../../Tools/timer';
-import Emotion from '../emotion';
+import Emotion from '../emoModal';
 
 export default class Green extends Component {
     

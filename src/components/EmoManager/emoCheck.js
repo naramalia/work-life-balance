@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
+import EmoModal from "./emoModal";
+
 class EmoCheck extends Component {
+    constructor (props) {
+        super(props);
+
+    this.state = {
+        emoModalIsOpen: false
+    };
         
-    constructor () {
-        super();
-        
+    this.handleNewEmotionClick = this.handleNewEmotionClick.bind(this);
+
     }
 
-    handleOnClick () {
-        
+    handleNewEmotionClick() {
+        this.setState({
+            emoModalIsOpen: true
+        })
     }
-    
 
     render () {
 
@@ -23,21 +31,44 @@ class EmoCheck extends Component {
 
                 <div className="emotion-check">
                     <div className="emotion-check_card emotion-check_blue">
-                        {/* <Link to="/emotion"> */}
-                            <img src ='./images/emotion/cry.svg' alt="sad face"></img>
-                        {/* </Link> */}
+                        <EmoModal modalIsOpen={this.state.emoModalIsOpen}/>
+
+                        <div className="new-emotion-link">
+                            <a onClick={this.handleNewEmotionClick}>
+                                <img src ='./images/emotion/cry.svg' alt="sad face"></img>
+                            </a>    
+                        </div>
                     </div>
 
                     <div className="emotion-check_card emotion-check_green">
-                        <img src ='./images/emotion/smile.svg' alt="happy face"></img>
+                        <EmoModal modalIsOpen={this.state.emoModalIsOpen}/>
+
+                            <div className="new-emotion-link">
+                                <a onClick={this.handleNewEmotionClick}>
+                                    <img src ='./images/emotion/smile.svg' alt="happy face"></img>
+                                </a>
+                            </div>
                     </div>
 
                     <div className="emotion-check_card emotion-check_yellow">
-                        <img src ='./images/emotion/emoji.svg' alt="mixed up face"></img>
+                        <EmoModal modalIsOpen={this.state.emoModalIsOpen}/>
+
+                        <div className="new-emotion-link">
+                            <a onClick={this.handleNewEmotionClick}>
+                                <img src ='./images/emotion/emoji.svg' alt="mixed up face"></img>
+                            </a>
+                        </div>
+    
                     </div>
 
                     <div className="emotion-check_card emotion-check_red">
-                        <img src ='./images/emotion/angry.svg' alt="mad face"></img>
+                        <EmoModal modalIsOpen={this.state.emoModalIsOpen}/>
+
+                        <div className="new-emotion-link">
+                            <a onClick={this.handleNewEmotionClick}>
+                                <img src ='./images/emotion/angry.svg' alt="mad face"></img>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
