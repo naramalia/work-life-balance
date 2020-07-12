@@ -1,0 +1,38 @@
+.timer-bar {
+    height: 100vh;
+    width: 10vw;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+
+    .timer-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+}
+
+.timer-item {
+    color: #111;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 30px;
+    margin: 10px;
+    padding-top: 10px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.timer-item span {
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}

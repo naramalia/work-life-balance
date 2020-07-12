@@ -22,6 +22,7 @@ body {
 }
 
 .app {
+    height: 100vh;
     margin-top: 2rem;
     display: grid;
     justify-items: center;
@@ -31,3 +32,4 @@ body {
 @import 'navigation';
 @import 'tasks';
 @import 'emotions';
+@import 'tools';
