@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 import EmoModal from "./emoModal";
 
 class EmoCheck extends Component {
-    constructor (props) {
-        super(props);
+    constructor () {
+        super();
 
     this.state = {
         emoModalIsOpen: false
     };
         
     this.handleNewEmotionClick = this.handleNewEmotionClick.bind(this);
+    this.handleModalClose = this.handleModalClose.bind(this);
+
 
     }
+
 
     handleNewEmotionClick() {
         this.setState({
             emoModalIsOpen: true
-        })
+        });
     }
+
+    handleModalClose() {
+        this.setState({
+            emoModalIsOpen: false
+        });
+    }
+    
 
     render () {
 
@@ -31,7 +40,11 @@ class EmoCheck extends Component {
 
                 <div className="emotion-check">
                     <div className="emotion-check_card emotion-check_blue">
-                        <EmoModal modalIsOpen={this.state.emoModalIsOpen}/>
+                        {/* <EmoModal
+                            handleModalClose={this.handleModalClose}
+                            modalIsOpen={this.state.emoModalIsOpen}
+                            // className="emo-modal emo-modal_blue"
+                        /> */}
 
                         <div className="new-emotion-link">
                             <a onClick={this.handleNewEmotionClick}>
@@ -41,7 +54,11 @@ class EmoCheck extends Component {
                     </div>
 
                     <div className="emotion-check_card emotion-check_green">
-                        <EmoModal modalIsOpen={this.state.emoModalIsOpen}/>
+                        <EmoModal 
+                            handleModalClose={this.handleModalClose}
+                            modalIsOpen={this.state.emoModalIsOpen}
+                            // className="emo-modal emo-modal_green"
+                        />
 
                             <div className="new-emotion-link">
                                 <a onClick={this.handleNewEmotionClick}>
@@ -51,7 +68,11 @@ class EmoCheck extends Component {
                     </div>
 
                     <div className="emotion-check_card emotion-check_yellow">
-                        <EmoModal modalIsOpen={this.state.emoModalIsOpen}/>
+                        <EmoModal 
+                            handleModalClose={this.handleModalClose}
+                            modalIsOpen={this.state.emoModalIsOpen}
+                            // className="emo-modal emo-modal_yellow"
+                            />
 
                         <div className="new-emotion-link">
                             <a onClick={this.handleNewEmotionClick}>
@@ -62,7 +83,11 @@ class EmoCheck extends Component {
                     </div>
 
                     <div className="emotion-check_card emotion-check_red">
-                        <EmoModal modalIsOpen={this.state.emoModalIsOpen}/>
+                        <EmoModal 
+                            handleModalClose={this.handleModalClose}
+                            modalIsOpen={this.state.emoModalIsOpen}
+                            // className="emo-modal emo-modal_red"
+                            />
 
                         <div className="new-emotion-link">
                             <a onClick={this.handleNewEmotionClick}>
